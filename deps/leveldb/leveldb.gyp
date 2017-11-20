@@ -126,7 +126,10 @@
                 '-pthread'
                 '-fexceptions'
             ]
-          , 'cflags!': [ '-fno-exceptions' ]
+          , 'cflags!': [
+                '-fno-exceptions'
+              , '-Wno-unused-but-set-variable'
+            ]
           , 'cflags_cc!': [ '-fno-exceptions' ]
         }]
       , ['OS == "freebsd"', {
