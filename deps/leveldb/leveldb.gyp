@@ -4,7 +4,7 @@
         'ldbversion': 'rocksdb'
     }
   , 'type': 'static_library'
-		# Overcomes an issue with the linker and thin .a files on SmartOS
+    # Overcomes an issue with the linker and thin .a files on SmartOS
   , 'standalone_static_library': 1
   , 'dependencies': [
         '../snappy/snappy.gyp:snappy'
@@ -100,6 +100,22 @@
       , ['OS == "linux"', {
             'defines': [
                 'OS_LINUX=1',
+                'ROCKSDB_LIB_IO_POSIX=1'
+            ]
+          , 'libraries': [
+                '-lpthread'
+            ]
+          , 'ccflags': [
+                '-pthread'
+                '-fexceptions'
+            ]
+          , 'cflags!': [ '-fno-exceptions' ]
+          , 'cflags_cc!': [ '-fno-exceptions' ]
+        }]
+      , ['OS == "android"', {
+            'defines': [
+                'OS_LINUX=1',
+                'ROCKSDB_LITE=1',
                 'ROCKSDB_LIB_IO_POSIX=1'
             ]
           , 'libraries': [

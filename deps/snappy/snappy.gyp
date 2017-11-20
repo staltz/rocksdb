@@ -48,6 +48,13 @@
             ]
           , 'cflags!': [ '-fno-tree-vrp' ]
         }]
+      , ['OS == "android"', {
+            'cflags': [
+                '-Wno-sign-compare'
+              , '-Wno-unused-function'
+            ]
+          , 'cflags!': [ '-fno-tree-vrp' ]
+        }]
       , ['OS == "freebsd"', {
             'cflags': [
                 '-Wno-sign-compare'
