@@ -2,6 +2,7 @@
     'variables': {
         'conditions': [
             ['OS=="linux"',   {'os_include': 'linux'}]
+          , ['OS=="android"', {'os_include': 'android'}]
           , ['OS=="mac"',     {'os_include': 'mac'}]
           , ['OS=="solaris"', {'os_include': 'solaris'}]
           , ['OS=="win"',     {'os_include': 'win32'}]
@@ -11,7 +12,7 @@
     }
   , 'target_name': 'snappy'
   , 'type': 'static_library'
-		# Overcomes an issue with the linker and thin .a files on SmartOS
+    # Overcomes an issue with the linker and thin .a files on SmartOS
   , 'standalone_static_library': 1
   , 'include_dirs': [
         '<(os_include)'
@@ -19,7 +20,7 @@
     ]
   , 'direct_dependent_settings': {
         'include_dirs': [
-        	'<(os_include)'
+          '<(os_include)'
           , 'snappy-1.1.4'
         ]
     }
