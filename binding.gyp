@@ -45,6 +45,11 @@
                     , 'MACOSX_DEPLOYMENT_TARGET': '10.8'
             }
           }]
+        , ['OS == "android"', {
+              'cflags': []
+            , 'cflags!': [ '-fno-tree-vrp', '-fno-exceptions' ]
+            , 'cflags_cc!': [ '-fno-exceptions' ]
+          }]
         , ['OS == "linux"', {
               'cflags': []
             , 'cflags!': [ '-fno-tree-vrp', '-fno-exceptions' ]
