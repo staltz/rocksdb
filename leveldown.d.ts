@@ -3,27 +3,27 @@ import * as Abstract from 'abstract-leveldown';
 declare namespace rocksdb {
   export interface RocksDB<TKey, TValue>
     extends Abstract.LevelDOWN<
-    TKey,
-    TValue,
-    RocksDBOptions,
-    RocksDBPutOptions,
-    RocksDBGetOptions,
-    RocksDBDeleteOptions,
-    RocksDBIteratorOptions<TKey, TValue>,
-    RocksDBBatchOptions> {
+        TKey,
+        TValue,
+        RocksDBOptions,
+        RocksDBPutOptions,
+        RocksDBGetOptions,
+        RocksDBDeleteOptions,
+        RocksDBIteratorOptions<TKey, TValue>,
+        RocksDBBatchOptions
+      > {
     compactRange(start: TKey, end: TKey, cb: (err?: any) => void): void;
     getProperty(property: string): string;
-    iterator(options?: RocksDBIteratorOptions<TKey, TValue>): RocksDBIterator<TKey>
+    iterator(
+      options?: RocksDBIteratorOptions<TKey, TValue>,
+    ): RocksDBIterator<TKey>;
     destroy(location: string, cb: (err?: any) => void): void;
-    repair(location: string, cb: (err?: any) => void): void;
   }
 
-  export interface RocksDBOptions {
-
-  }
+  export interface RocksDBOptions {}
 
   export interface RocksDBPutOptions {
-    sync?: boolean
+    sync?: boolean;
   }
 
   export interface RocksDBGetOptions {
@@ -60,11 +60,8 @@ declare namespace rocksdb {
     fastFuture: any;
   }
 }
-declare function rocksdb<
-  TKey=any,
-  TValue=any
-  >(location: string)
-  : rocksdb.RocksDB<TKey, TValue>;
-
+declare function rocksdb<TKey = any, TValue = any>(
+  location: string,
+): rocksdb.RocksDB<TKey, TValue>;
 
 export = rocksdb;

@@ -28,22 +28,4 @@ void DestroyWorker::Execute () {
   SetStatus(rocksdb::DestroyDB(**location, options));
 }
 
-/** REPAIR WORKER **/
-
-RepairWorker::RepairWorker (
-    Nan::Utf8String* location
-  , Nan::Callback *callback
-) : AsyncWorker(NULL, callback)
-  , location(location)
-{};
-
-RepairWorker::~RepairWorker () {
-  delete location;
-}
-
-void RepairWorker::Execute () {
-  rocksdb::Options options;
-  SetStatus(rocksdb::RepairDB(**location, options));
-}
-
 } // namespace leveldown

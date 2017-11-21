@@ -26,20 +26,6 @@ private:
   Nan::Utf8String* location;
 };
 
-class RepairWorker : public AsyncWorker {
-public:
-  RepairWorker (
-      Nan::Utf8String* location
-    , Nan::Callback *callback
-  );
-
-  virtual ~RepairWorker ();
-  virtual void Execute ();
-
-private:
-  Nan::Utf8String* location;
-};
-
 } // namespace leveldown
 
 #endif
