@@ -114,9 +114,9 @@
         }]
       , ['OS == "android"', {
             'defines': [
-                'OS_LINUX=1',
                 'ROCKSDB_LITE=1',
                 'OS_ANDROID=1',
+                'ROCKSDB_LIB_IO_POSIX=1',
                 '_REENTRANT=1'
             ]
           , 'libraries': [
