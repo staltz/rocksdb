@@ -51,9 +51,10 @@
       , ['OS == "android"', {
             'cflags': [
                 '-Wno-sign-compare'
+              , '-fPIC'
               , '-Wno-unused-function'
             ]
-          , 'cflags!': [ '-fno-tree-vrp' ]
+          , 'cflags!': [ '-fno-tree-vrp', '-fPIE' ]
         }]
       , ['OS == "freebsd"', {
             'cflags': [

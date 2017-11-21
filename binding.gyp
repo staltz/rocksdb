@@ -46,9 +46,11 @@
             }
           }]
         , ['OS == "android"', {
-              'cflags': []
-            , 'cflags!': [ '-fno-tree-vrp', '-fno-exceptions' ]
+              'cflags': [ '-fPIC' ]
+            , 'ldflags': [ '-fPIC' ]
+            , 'cflags!': [ '-fno-tree-vrp', '-fno-exceptions', '-fPIE' ]
             , 'cflags_cc!': [ '-fno-exceptions' ]
+            , 'ldflags!': [ '-fPIE' ]
           }]
         , ['OS == "linux"', {
               'cflags': []

@@ -127,8 +127,12 @@
                 '-fno-builtin-memcmp',
                 '-fexceptions'
             ]
+          , 'cflags': [
+                '-fPIC'
+            ]
           , 'cflags!': [
                 '-fno-exceptions'
+              , '-fPIE'
               , '-Wno-unused-but-set-variable'
             ]
           , 'cflags_cc!': [ '-fno-exceptions' ]
