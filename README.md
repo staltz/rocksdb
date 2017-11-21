@@ -1,7 +1,7 @@
-rocksdb
+rocksdb-lite
 =========
 
-> A Low-level Node.js RocksDB binding
+> A Low-level Node.js RocksDB Lite binding for mobile platforms
 
 [![level badge][level-badge]](https://github.com/level/awesome)
 [![npm](https://img.shields.io/npm/v/rocksdb.svg)](https://www.npmjs.com/package/rocksdb)

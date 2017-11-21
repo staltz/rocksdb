@@ -1,6 +1,6 @@
 {
-  "name": "rocksdb",
-  "description": "A Node.js RocksDB binding, a backend for LevelUP",
+  "name": "rocksdb-lite",
+  "description": "A Node.js RocksDB Lite binding, a backend for LevelUP",
   "version": "1.1.0",
   "contributors": [
     "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
@@ -17,13 +17,14 @@
     "Pedro Teixeira <pedro.teixeira@gmail.com> (https://github.com/pgte)",
     "James Halliday <mail@substack.net> (https://github.com/substack)",
     "Gordon Hall <gordonh@member.fsf.org> (https://github.com/bookchin)",
-    "Yichao 'Peak' Ji <peakji@gmail.com> (https://github.com/peakji)"
+    "Yichao 'Peak' Ji <peakji@gmail.com> (https://github.com/peakji)",
+    "Andre Staltz <andre@staltz.com> (https://github.com/staltz)"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/level/rocksdb.git"
+    "url": "https://github.com/staltz/rocksdb-lite.git"
   },
-  "homepage": "https://github.com/level/rocksdb",
+  "homepage": "https://github.com/staltz/rocksdb-lite",
   "keywords": [
     "leveldb",
     "level"
