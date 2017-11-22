@@ -47,7 +47,7 @@
           }]
         , ['OS == "android"', {
               'cflags': [ '-fPIC' ]
-            , 'ldflags': [ '-fPIC' ]
+            , 'ldflags': [ '-fPIC', "-Wl,-rpath,'$$ORIGIN'" ]
             , 'cflags!': [ '-fno-tree-vrp', '-fno-exceptions', '-fPIE' ]
             , 'cflags_cc!': [ '-fno-exceptions' ]
             , 'ldflags!': [ '-fPIE' ]
