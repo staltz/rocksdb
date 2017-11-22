@@ -1,7 +1,7 @@
 {
   "name": "rocksdb-lite",
   "description": "A Node.js RocksDB Lite binding, a backend for LevelUP",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "contributors": [
     "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
     "John Chesley <john@chesl.es> (https://github.com/chesles/)",
@@ -25,10 +25,7 @@
     "url": "https://github.com/staltz/rocksdb-lite.git"
   },
   "homepage": "https://github.com/staltz/rocksdb-lite",
-  "keywords": [
-    "leveldb",
-    "level"
-  ],
+  "keywords": ["leveldb", "level"],
   "main": "leveldown.js",
   "typings": "leveldown.d.ts",
   "dependencies": {
